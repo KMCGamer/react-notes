@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import uuid from 'uuid/v1'
 
-import Nav from './Nav/Nav'
-import Editor from './Editor/Editor'
+import Nav from './components/Nav'
+import Editor from './components/Editor'
+import { connect } from 'react-redux'
 
 class App extends Component {
   constructor() {
@@ -92,4 +93,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default connect()(App)
