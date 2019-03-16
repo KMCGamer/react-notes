@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 /* 
   Allows you to change the title of the note,
@@ -6,11 +6,10 @@ import React from "react";
 */
 
 export default function EditorFunctions(props) {
-
   function handleClick(event) {
     event.preventDefault()
-    if (props.title === "") {
-      alert("You need to add a title!")
+    if (props.title === '') {
+      alert('You need to add a title!')
     } else {
       props.handleClick(event)
     }
@@ -34,12 +33,12 @@ export default function EditorFunctions(props) {
       />
       <div>
         <button name="save" onClick={handleClick} tabIndex="3">
-          <i class="fas fa-save"></i> Save
+          <i class="fas fa-save" /> Save
         </button>
         <button name="new" onClick={newNote} tabIndex="4">
-          <i class="fas fa-plus"></i> New
+          <i class="fas fa-plus" /> New
         </button>
       </div>
     </div>
-  );
+  )
 }

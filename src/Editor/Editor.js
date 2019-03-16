@@ -1,6 +1,6 @@
-import React from "react";
-import EditorNote from "./EditorNote";
-import EditorFunctions from "./EditorFunctions";
+import React from 'react'
+import EditorNote from './EditorNote'
+import EditorFunctions from './EditorFunctions'
 
 /* 
   Holds the current note for editing
@@ -16,5 +16,5 @@ export default function Editor(props) {
       />
       <EditorNote text={props.text} handleChange={props.handleChange} />
     </form>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 /* 
 	Allows for editing of text from a note
@@ -12,5 +12,5 @@ export default function EditorNote(props) {
       placeholder="Enter new note here..."
       tabIndex="2"
     />
-  );
+  )
 }

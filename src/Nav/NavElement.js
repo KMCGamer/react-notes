@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import Utils from '../Utils'
 
 /* 
@@ -7,16 +7,18 @@ import Utils from '../Utils'
 
 export default function NavElement(props) {
   function handleClick() {
-    props.handleClick(props.note.id);
+    props.handleClick(props.note.id)
   }
 
   return (
     <div
       onClick={handleClick}
-      className={`nav-element ${props.active ? "nav-element-active" : ""}`}
+      className={`nav-element ${props.active ? 'nav-element-active' : ''}`}
     >
       <div className="nav-element-title">{props.note.title}</div>
-      <div className="nav-element-text">{Utils.truncate(props.note.text, 20)}</div>
+      <div className="nav-element-text">
+        {Utils.truncate(props.note.text, 20)}
+      </div>
     </div>
-  );
+  )
 }
