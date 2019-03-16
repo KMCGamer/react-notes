@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  max-width: 1000px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 24px;
+  flex-grow: 1;
+}
+
+.nav {
+  height: 600px;
+  flex-basis: 200px;
+  overflow-y: auto;
+  border-radius: 5px 0px 0px 5px;
+  border-right: 1px solid lightgrey;
+}
+
+.nav-element {
+  background-color: white;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.nav-element-placeholder {
+  background-color: white;
+  padding: 18px;
+  font-weight: 300;
+  color: grey;
+  font-style: italic;
+}
+
+.nav-element + .nav-element {
+  border-top: 1px solid lightgrey;
+}
+
+.nav-element:hover {
+  background-color: #f9f9f9;
+}
+
+.nav-element-active {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.nav-element:nth-child(1) {
+  border-radius: 3px 0px 0px 0px;
+}
+
+.nav-element-title {
+  font-weight: 600;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.nav-element-text {
+  font-weight: 300;
+  color: grey;
+  font-style: italic;
+}
+
+.editor {
+  padding: 20px;
+  background-color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 5px 5px 0px;
+  flex-grow: 1;
+}
+
+.editor-functions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+textarea {
+  all: unset;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  background: white;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+}
+
+textarea:focus {
+  border-color: dodgerblue;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5em;
+}
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+button {
+  all: unset;
+  padding: 10px 15px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button > i {
+  padding: 0px 8px 0 5px;
+}
+
+button:hover {
+  background-color: #1a7ddd;
+}
+
+button:focus {
+  background-color: #144e88;
+}
+
+.note-title {
+  all: unset;
+  border-bottom: 1px solid grey;
+  font-size: 1.6em;
+  color: #333;
+  font-weight: 600;
+  width: unset;
+}
+
+.note-title:focus {
+  border-bottom: 1px solid dodgerblue;
+}
+
+.note-title::placeholder {
+  color: grey;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .nav {
+    border-radius: 0px;
+    border-right: unset;
+    border-top: 1px solid lightgrey;
+  }
+
+  .nav-element:nth-child(1) {
+    border-radius: 0px;
+  }
+
+  text-area {
+  }
+}
